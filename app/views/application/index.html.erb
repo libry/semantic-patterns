@@ -1,19 +1,316 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>JenaTest</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Agency - Start Bootstrap Theme</title>
+
 </head>
-<body>
 
-<%= yield %>
-<h1>HI!</h1>
-<p>It is now <%= @time %> </p>
-<% for q in @web_results %>
-	<p><%=h q %></p>
-<% end %>
+<body id="page-top" class="index">
 
-</body> 
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">E SIT 4 SIP</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#page-top">HOME</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#search">SEARCH</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#">CREATE</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#aboutproject">ABOUT</a>
+                    </li>
+                    <li>
+                       <!--/ <a class="page-scroll" href="#contact">Contact</a>-->
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-heading">E SIT 4 SIP</div>
+                <div class="intro-lead-in" style="font-family: "ClearSans-Thin"">You are looking für new teaching ideas and didactical methods? And you want to use multimedia and information technologies in your lessons? Or you want to share your own methods with other teachers? With E SIT 4 SIP you're able to search or create <a href="#aboutpattern" style="text-decoration: underline"> Instructional Patterns</a> </div>
+                <a href="#search" class="page-scroll btn btn-xl">Search</a>
+                <a href="#create" class="page-scroll btn btn-xl">Create</a>
+            </div>
+             
+        </div>
+        
+    </header>
+ 
+    <!-- About Instructional Pattern Section -->
+    <section id="aboutpattern" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">About Instructional Patterns</h2>
+                    <!--<h3 class="section-subheading text-muted">Didactical Patterns as Best Practices</h3>-->
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-6">
+                   
+                    <h4 class="service-heading text-left">Definition</h4>
+                    <p class="text-muted text-justify">Pattern demontrates how teachers can facilitate the interactivity of these
+
+patterns to match their goals for student learning. these interactive patterns 
+
+are reinforced through the incorporation of medial, cognitive and behavioral 
+
+neuroscence research. Patterns give teachers new ideas and ways to shape their lessons. Special
+
+attention is given to the inclusion of digital media to the teaching lessons.</p>
+                </div>
+                <div class="col-md-6">
+                    
+                    <h4 class="service-heading text-left">Use</h4>
+                    <p class="text-muted text-justify">This website helps teachers to choose suitable Instructional Patterns for their 
+
+(teaching) lessons. E.g. to make them more varied.</p>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Search -->
+    <section id="search">
+        <div class="container">
+        	<div class="row text-center">
+                <div class="col-md-6">
+                	
+                	
+
+                   
+                    <h2 class="service-heading text-left">Lorem</h2>
+                    	<div class="dropdown">
+    						<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
+    							<span class="caret"></span></button>
+    								<ul class="dropdown-menu">
+      									<li><a href="#">HTML</a></li>
+      									<li><a href="#">CSS</a></li>
+      									<li><a href="#">JavaScript</a></li>
+      									<li class="divider"></li>
+      									<li><a href="#">About Us</a></li>
+    								</ul>
+  						</div>    
+  						<div class="dropdown">
+    						<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
+    							<span class="caret"></span></button>
+    								<ul class="dropdown-menu">
+      									<li><a href="#">HTML</a></li>
+      									<li><a href="#">CSS</a></li>
+      									<li><a href="#">JavaScript</a></li>
+      									<li class="divider"></li>
+      									<li><a href="#">About Us</a></li>
+    								</ul>
+  						</div> 
+  						<div class="dropdown">
+    						<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
+    							<span class="caret"></span></button>
+    								<ul class="dropdown-menu">
+      									<li><a href="#">HTML</a></li>
+      									<li><a href="#">CSS</a></li>
+      									<li><a href="#">JavaScript</a></li>
+      									<li class="divider"></li>
+      									<li><a href="#">About Us</a></li>
+    								</ul>
+  						</div> 
+  						<div class="dropdown">
+    						<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
+    							<span class="caret"></span></button>
+    								<ul class="dropdown-menu">
+      									<li><a href="#">HTML</a></li>
+      									<li><a href="#">CSS</a></li>
+      									<li><a href="#">JavaScript</a></li>
+      									<li class="divider"></li>
+      									<li><a href="#">About Us</a></li>
+    								</ul>
+  						</div> 
+  						<div class="dropdown">
+    						<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
+    							<span class="caret"></span></button>
+    								<ul class="dropdown-menu">
+      									<li><a href="#">HTML</a></li>
+      									<li><a href="#">CSS</a></li>
+      									<li><a href="#">JavaScript</a></li>
+      									<li class="divider"></li>
+      									<li><a href="#">About Us</a></li>
+    								</ul>
+  						</div>          
+  				</div>
+  				
+                <div class="col-md-6">
+                    <%= yield %>
+						<h1>HI!</h1>
+						<p>It is now <%= @time %> </p>
+						<% for q in @web_results %>
+						<p><%=h q %></p>
+						<% end %>
+						<br>
+						<h1>educationalSubjects</h1>
+						<% for q in @educationalSubjects %>
+						<p><%= q[/medienprojekt#.*>,/][14..-3] %></p>
+						<% end %>
+						<br>
+						<h1>arrangement</h1>
+						<% for q in @arrangement %>
+						<p><%= q[/medienprojekt#.*>,/][14..-3] %></p>
+						<% end %>
+						<br>
+						<h1>cognitiveProcess</h1>
+						<% for q in @cognitiveProcess %>
+						<p><%= q[/medienprojekt#.*>,/][14..-3] %></p>
+						<% end %>
+						<br>
+						<h1>learningActivity</h1>
+						<% for q in @learningActivity %>
+						<p><%= q[/medienprojekt#.*>,/][14..-3] %></p>
+						<% end %>
+						<br>
+						<h1>selfDeterminationDegree</h1>
+						<% for q in @selfDeterminationDegree %>
+						<p><%= q[/medienprojekt#.*>,/][14..-3] %></p>
+						<% end %>
+						<br>
+						<h1>competence</h1>
+						<% for q in @competence %>
+						<p><%= q[/medienprojekt#.*>,/][14..-3] %></p>
+						<% end %>
+						<br>
+						<h1>knowledge</h1>
+						<% for q in @knowledge %>
+						<p><%= q[/medienprojekt#.*>,/][14..-3] %></p>
+						<% end %>
+                </div>
+               
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Results -->
+    <section id="results" class="well">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-6">
+                   
+                    <%= image_tag 'platzhalter.JPG' %>
+                </div>
+               <div class="col-md-6">
+                   
+                    <h2 class="service-heading text-left">Lorem</h2>
+                    <p class="text-muted text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                </div>
+               
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About the Project-->
+    <section id="aboutproject" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">About the Project</h2>
+                    <!--<h3 class="section-subheading text-muted">Didactical Patterns as Best Practices</h3>-->
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-6">
+                   
+                    <h4 class="service-heading text-left">Background-Story</h4>
+                    <p class="text-muted text-justify">Results emerging from multiple research projects have been showing promising 
+
+possibilities for the inclusion of ICT in schools. However, the actual adoption of 
+
+ICT in schools is much less successful. 
+
+The project’s partners are departments from University Education of 
+
+Weingarten (Germany), the Open University of Cyprus (Cyprus) and Linnaeus 
+
+University (Sweden).</p>
+                </div>
+                <div class="col-md-6">
+                    
+                    <h4 class="service-heading text-left">Goles</h4>
+                    <p class="text-muted text-justify">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolor</p>
+                </div>
+               
+            </div>
+            </div>
+    </section>
+
+    
+    
+    
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; Medienprojekt 2016 Medien- und Bildungsmanagement</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="#"><i class="fa fa-twitter">t</i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-facebook">f</i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-linkedin">f</i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li><a href="#">Contact</a>
+                        </li>
+                        <li><a href="#">Local Disclosure</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
 </html>

@@ -42,6 +42,128 @@ class ApplicationController < ActionController::Base
     hash = {:predicate => "requires", :object => "individualWork"}
     data.push(hash)
     
+    query = name_query_generator(data)
+       
+    puts query
+    
+    result = sparql.query(query)
+
+    @web_results = Array.new
+    
+    result.each_solution do |solution|
+      @web_results << solution.inspect
+    end
+    
+    data = Array.new
+    
+    hash = {:object => "educationalSubjects"}
+    data.push(hash)
+    
+    query = object_query_generator(data)
+    
+    result = sparql.query(query)
+    
+    @educationalSubjects = Array.new
+    
+    result.each_solution do |solution|
+      @educationalSubjects << solution.inspect
+    end
+
+    data = Array.new
+    
+    hash = {:object => "arrangement"}
+    data.push(hash)
+    
+    query = object_query_generator(data)
+    
+    result = sparql.query(query)
+    
+    @arrangement = Array.new
+    
+    result.each_solution do |solution|
+      @arrangement << solution.inspect
+    end
+
+    data = Array.new
+    
+    hash = {:object => "cognitiveProcess"}
+    data.push(hash)
+    
+    query = object_query_generator(data)
+    
+    result = sparql.query(query)
+    
+    @cognitiveProcess = Array.new
+    
+    result.each_solution do |solution|
+      @cognitiveProcess << solution.inspect
+    end
+
+    data = Array.new
+    
+    hash = {:object => "learningActivity"}
+    data.push(hash)
+    
+    query = object_query_generator(data)
+    
+    result = sparql.query(query)
+    
+    @learningActivity = Array.new
+    
+    result.each_solution do |solution|
+      @learningActivity << solution.inspect
+    end
+
+    data = Array.new
+    
+    hash = {:object => "selfDeterminationDegree"}
+    data.push(hash)
+    
+    query = object_query_generator(data)
+    
+    result = sparql.query(query)
+    
+    @selfDeterminationDegree = Array.new
+    
+    result.each_solution do |solution|
+      @selfDeterminationDegree << solution.inspect
+    end
+
+    data = Array.new
+    
+    hash = {:object => "competence"}
+    data.push(hash)
+    
+    query = object_query_generator(data)
+    
+    result = sparql.query(query)
+    
+    @competence = Array.new
+    
+    result.each_solution do |solution|
+      @competence << solution.inspect
+    end
+
+    data = Array.new
+    
+    hash = {:object => "knowledge"}
+    data.push(hash)
+    
+    query = object_query_generator(data)
+    
+    result = sparql.query(query)
+    
+    @knowledge = Array.new
+    
+    result.each_solution do |solution|
+      @knowledge << solution.inspect
+    end
+   
+    @time = Time.now
+
+  end
+  
+  def name_query_generator(data)
     query = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
              PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
              PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -56,20 +178,26 @@ class ApplicationController < ActionController::Base
               }
 
     query = query << "      }\nLIMIT 400"
-    
-    puts query
-    
-    result = sparql.query(query)
+    return query
+  end
 
-    @web_results = Array.new
-    
-    result.each_solution do |solution|
-      @web_results << solution.inspect
-    end
-   
-    @time = Time.now
+  def object_query_generator(data)
+    query = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+             PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+             PREFIX owl: <http://www.w3.org/2002/07/owl#>
+             PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+             PREFIX :  <http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#>
+            
+             SELECT *
+             {"
+               
+    data.each {
+                |hash| query = query << "?name ?predicate :" << hash[:object] << " .\n"
+              }
 
+    query = query << "      }\nLIMIT 400"
+    return query
   end
  
-end
+ end
 
