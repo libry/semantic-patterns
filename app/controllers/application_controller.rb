@@ -44,7 +44,7 @@ class ApplicationController < ActionController::Base
     
     query = name_query_generator(data)
        
-    puts query
+    #puts query
     
     result = sparql.query(query)
 
@@ -116,7 +116,7 @@ class ApplicationController < ActionController::Base
 
     data = Array.new
     
-    hash = {:object => "selfDeterminationDegree"}
+    hash = {:predicate => "rdf:type", :object => "selfDeterminationDegree"}
     data.push(hash)
     
     query = object_query_generator(data)
@@ -192,12 +192,19 @@ class ApplicationController < ActionController::Base
              {"
                
     data.each {
-                |hash| query = query << "?name ?predicate :" << hash[:object] << " .\n"
-              }
+                |hash| if hash.has_key?(:predicate) 
+                         query = query << "?name " << hash[:predicate] <<  " :" << hash[:object] << " .\n"
+                       else
+                         query = query << "?name ?predicate :" << hash[:object] << " .\n"
+                       end
+            }
 
     query = query << "      }\nLIMIT 400"
+    puts query
     return query
   end
+ 
+ 
  
  end
 
