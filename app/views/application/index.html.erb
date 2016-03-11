@@ -11,21 +11,19 @@
 
     <title>Agency - Start Bootstrap Theme</title>
 
-	<!--Rails assets -->
-	<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
-	<%= javascript_include_tag "application", "http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js", "data-turbolinks-track" => true %>
-    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+	<!--Rails assets -->
+	<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag "http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js", "application" => true %>
+	
 </head>
 
 <body id="page-top" class="index">
-
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -172,7 +170,7 @@ Furthermore, 			they...
                     <p class="text-muted text-justify" style="font-family: Aparijita-Italic">Search and find the matching Instructional Patterns for your lesson in our data base. The search is made via didactical criteria which you choose in the drop-down menus. For your search you can choose up to five criteria to specify your result. To get an overview of all Instructional Patterns please use the glossary.</h6>
                     	<div class="dropdown">
                     		<p class="categories">Subject<a href="#" data-toggle="tooltip" data-placement="right" title="Please select the subject in which you want to use the Instructional Pattern."><span class="glyphicon glyphicon-info-sign" style="margin-left: 5px; margin-top: 2px"></span></a></p>
-    						<select required class="btn btn-default dropdown-toggle searchbuttons form-control" class="form-control"  type="button" data-toggle="dropdown" >
+    						<select id="educationalSubjects" required class="btn btn-default dropdown-toggle searchbuttons form-control" class="form-control"  type="button" data-toggle="dropdown" >
   								<option value="" disabled selected>f.e. math...</option>
   								<% for q in @educationalSubjects %>
 								<option value="<%= q[/medienprojekt#.*>,/][14..-3]%>"><%= q[/medienprojekt#.*>,/][14..-3]%></option>
@@ -186,7 +184,7 @@ Conceptual knowledge: The students prove that they understood the learned facts 
 Procedural knowledge: The students can design processes, analyze structures, link existing with new knowledge and develop hypothesis.
 Metacognitive knowledge: The students use strategies to deal with existing knowledge and combine process steps to reach a learning objective.
  "><span class="glyphicon glyphicon-info-sign" style="margin-left: 5px; margin-top: 2px"></span></a></p>
-    						<select required class="btn btn-default dropdown-toggle searchbuttons form-control" class="form-control" type="button" data-toggle="dropdown" >
+    						<select id="selfDeterminationDegree" required class="btn btn-default dropdown-toggle searchbuttons form-control" class="form-control" type="button" data-toggle="dropdown" >
   								<option value="" disabled selected>f.e. self organized...</option>
 	  								<% for q in @selfDeterminationDegree %>
 									<option value="<%= q[/medienprojekt#.*>/][14..-5]%>"><%= q[/medienprojekt#.*>/][14..-5]%></option>
@@ -203,7 +201,7 @@ Analyse: The students are able to order materials in their single parts and defi
                     Evaluate: The students are able to pass sentence on the basis of criteria and standards.
                     
 Create:  The students are able to bring elements together to a new, coherent and functional whole thing."><span class="glyphicon glyphicon-info-sign" style="margin-left: 5px; margin-top: 2px"></span></a></p>
-    						<select required class="btn btn-default dropdown-toggle searchbuttons form-control" class="form-control" type="button" data-toggle="dropdown" >
+    						<select id="cognitiveProcess" required class="btn btn-default dropdown-toggle searchbuttons form-control" class="form-control" type="button" data-toggle="dropdown" >
   								<option value="" disabled selected>f.e. remember...</option>
 	  								<% for q in @cognitiveProcess %>
 									<option value="<%= q[/medienprojekt#.*>,/][14..-3]%>"><%= q[/medienprojekt#.*>,/][14..-3]%></option>
@@ -216,7 +214,7 @@ Create:  The students are able to bring elements together to a new, coherent and
 Conceptual knowledge: The students prove that they understood the learned facts in wider context to make use of them in new exercises.
 Procedural knowledge: The students can design processes, analyze structures, link existing with new knowledge and develop hypothesis.
 Metacognitive knowledge: The students use strategies to deal with existing knowledge and combine process steps to reach a learning objective."><span class="glyphicon glyphicon-info-sign" style="margin-left: 5px; margin-top: 2px"></span></a></p>
-    						<select required class="btn btn-default dropdown-toggle searchbuttons form-control" class="form-control" type="button" data-toggle="dropdown" >
+    						<select id="knowledge" required class="btn btn-default dropdown-toggle searchbuttons form-control" class="form-control" type="button" data-toggle="dropdown" >
   								<option value="" disabled selected>f.e. factual knowledge...</option>
 	  								<% for q in @knowledge %>
 									<option value="<%= q[/medienprojekt#.*>,/][14..-3]%>"><%= q[/medienprojekt#.*>,/][14..-3]%></option>
@@ -230,14 +228,14 @@ Metacognitive knowledge: The students use strategies to deal with existing knowl
                     			Pair: The students work together in pairs.
                     			Single group: The students work together in groups of 3-7 persons.
                     			Class size: The students work all together in class."><span class="glyphicon glyphicon-info-sign" style="margin-left: 5px; margin-top: 2px"></span></a></p>
-    						<select required class="btn btn-default dropdown-toggle searchbuttons form-control" class="form-control" type="button" data-toggle="dropdown" >
+    						<select id="arrangement" required class="btn btn-default dropdown-toggle searchbuttons form-control" class="form-control" type="button" data-toggle="dropdown" >
   								<option value="" disabled selected>f.e. groupwork...</option>
 	  								<% for q in @arrangement %>
 									<option value="<%= q[/medienprojekt#.*>,/][14..-3]%>"><%= q[/medienprojekt#.*>,/][14..-3]%></option>
 									<% end %>
 							</select>
   						</div> 
-  						<p style="text-align: right"> <a href="#results" type="button" class="page-scroll btn btn-xl searchgo">
+  						<p style="text-align: right" onclick="search()"> <a href="#results" type="button" class="page-scroll btn btn-xl searchgo">
     						<span class="glyphicon glyphicon-search"></span> Search
  						</a></p>         
   				</div>
@@ -516,7 +514,7 @@ The glossary shows you all instructional pattern of our data base and gives you 
                    
                     <h2 class="search-heading text-left">RESULTS</h2>
                     <p class="text-muted text-justify" style="font-size: 20px">Please choose your <a href="#search">search categories.</a></p>
-                                
+                    <div id="resultList"></div>            
                 </div>
                
             </div>

@@ -163,6 +163,57 @@ class ApplicationController < ActionController::Base
 
   end
   
+  def search
+    sparql = SPARQL::Client.new("http://localhost:3030/medienprojekt/")    
+
+    query = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+             PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+             PREFIX owl: <http://www.w3.org/2002/07/owl#>
+             PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+             PREFIX :  <http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#>
+            
+             SELECT *
+             {"
+
+    for searchTerm in params[:id].split(',')
+      name = searchTerm.split('_')[0]
+      if name == 'educationalSubjects'
+        predicate = "usableIn"
+      end
+      if name == 'cognitiveProcess'
+        predicate = "includes"
+      end
+      if name == 'selfDeterminationDegree'
+        predicate = "promotes" 
+      end
+      if name == 'knowledge'
+        predicate = "mediates"
+      end
+      if name == 'arrangement'
+        predicate = "requires"
+      end
+      query = query << "?name :" << predicate << " :" << searchTerm.split('_')[1] << " .\n"
+    end
+
+    query  = query << "      }\nLIMIT 400"
+    
+    result = sparql.query(query)
+    
+    msg = ""
+       
+    result.each_solution do |solution|
+      msg << "<p><a href=\"" << solution.inspect[/medienprojekt#.*>/][14..-5].downcase << "\" data-toggle=\"modal\" data-target=\"#" << solution.inspect[/medienprojekt#.*>/][14..-5].downcase << "\" style=\"text-decoration: underline\">" << solution.inspect[/medienprojekt#.*>/][14..-5] << "</a></p><br>"
+    end
+ 
+    @msg = { "content" => msg}
+ 
+    respond_to do |format|
+      format.html
+      format.json { render json: @msg }
+    end
+    
+  end
+
   def name_query_generator(data)
     query = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
              PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -203,8 +254,6 @@ class ApplicationController < ActionController::Base
     puts query
     return query
   end
- 
- 
  
  end
 
