@@ -28,7 +28,9 @@ class ApplicationController < ActionController::Base
                                       #:name md:promotes md:selfOrganized,
                                       #:name md:requires md:smallgroup
     #                                ]).limit(10)
-    
+
+    ## !! Array ???      
+
     data = Array.new
     
     hash = {:predicate => "usableIn", :object => "mathematics"}
@@ -163,6 +165,8 @@ class ApplicationController < ActionController::Base
 
   end
   
+      ## Suchanfrage
+  
   def search
     sparql = SPARQL::Client.new("http://localhost:3030/medienprojekt/")    
 
@@ -199,17 +203,17 @@ class ApplicationController < ActionController::Base
     
     result = sparql.query(query)
     
-    msg = ""
+    sresult = ""
        
     result.each_solution do |solution|
-      msg << "<p><a href=\"" << solution.inspect[/medienprojekt#.*>/][14..-5].downcase << "\" data-toggle=\"modal\" data-target=\"#" << solution.inspect[/medienprojekt#.*>/][14..-5].downcase << "\" style=\"text-decoration: underline\">" << solution.inspect[/medienprojekt#.*>/][14..-5] << "</a></p><br>"
+      sresult << "<li><a href=\"" << solution.inspect[/medienprojekt#.*>/][14..-5].downcase << "\" data-toggle=\"modal\" data-target=\"#" << solution.inspect[/medienprojekt#.*>/][14..-5].downcase << "\" style=\"text-decoration: underline\">" << solution.inspect[/medienprojekt#.*>/][14..-5].capitalize << "</a></li><br>"
     end
  
-    @msg = { "content" => msg}
+    @sresult = { "content" => sresult}
  
     respond_to do |format|
       format.html
-      format.json { render json: @msg }
+      format.json { render json: @sresult }
     end
     
   end
