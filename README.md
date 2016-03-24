@@ -36,7 +36,7 @@ line `09 sparql = SPARQL::Client.new("http://localhost:3030/dataset/)`
 ### 3. Website
 * Open `localhost:3000/application` in your Browser to view and use the website 
 
-## Known Issus 
+## Known Issues 
 * The asset pipeline for Javascrips and Stylesheets doesn't work properly
 * Sometimes the Dropdown doesn't work properly, you can't select a value
 * ... 
