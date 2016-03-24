@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   def index
     @time = Time.now
 
-    sparql = SPARQL::Client.new("http://localhost:3030/medienprojekt/")
+    sparql = SPARQL::Client.new("http://localhost:3030/dataset/")
     
     ## SPARQL Query 
     #SELECT ?a

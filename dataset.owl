@@ -1,0 +1,1209 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY medienprojekt "http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#"
+     xml:base="http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:medienprojekt="http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#has -->
+
+    <owl:ObjectProperty rdf:about="&medienprojekt;has">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="&medienprojekt;instructionalPattern"/>
+        <rdfs:range rdf:resource="&medienprojekt;instructor"/>
+        <rdfs:range rdf:resource="&medienprojekt;learner"/>
+        <rdfs:range rdf:resource="&medienprojekt;selfDeterminationDegree"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#includes -->
+
+    <owl:ObjectProperty rdf:about="&medienprojekt;includes">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#is -->
+
+    <owl:ObjectProperty rdf:about="&medienprojekt;is">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#isImplementedIn -->
+
+    <owl:ObjectProperty rdf:about="&medienprojekt;isImplementedIn">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#isWrittenBy -->
+
+    <owl:ObjectProperty rdf:about="&medienprojekt;isWrittenBy">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#mediates -->
+
+    <owl:ObjectProperty rdf:about="&medienprojekt;mediates">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#promotes -->
+
+    <owl:ObjectProperty rdf:about="&medienprojekt;promotes">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#requires -->
+
+    <owl:ObjectProperty rdf:about="&medienprojekt;requires">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#similarTo -->
+
+    <owl:ObjectProperty rdf:about="&medienprojekt;similarTo">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#usableIn -->
+
+    <owl:ObjectProperty rdf:about="&medienprojekt;usableIn">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#firstname -->
+
+    <owl:DatatypeProperty rdf:about="&medienprojekt;firstname"/>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#lastname -->
+
+    <owl:DatatypeProperty rdf:about="&medienprojekt;lastname"/>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#link -->
+
+    <owl:DatatypeProperty rdf:about="&medienprojekt;link"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#arrangement -->
+
+    <owl:Class rdf:about="&medienprojekt;arrangement">
+        <rdfs:subClassOf rdf:resource="&medienprojekt;learningEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#author -->
+
+    <owl:Class rdf:about="&medienprojekt;author">
+        <rdfs:subClassOf rdf:resource="&medienprojekt;metadata"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#cognitiveProcess -->
+
+    <owl:Class rdf:about="&medienprojekt;cognitiveProcess">
+        <rdfs:subClassOf rdf:resource="&medienprojekt;learningProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#competence -->
+
+    <owl:Class rdf:about="&medienprojekt;competence">
+        <rdfs:subClassOf rdf:resource="&medienprojekt;transfer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#date -->
+
+    <owl:Class rdf:about="&medienprojekt;date">
+        <rdfs:subClassOf rdf:resource="&medienprojekt;metadata"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#didacticalMethod -->
+
+    <owl:Class rdf:about="&medienprojekt;didacticalMethod"/>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#educationalRequirement -->
+
+    <owl:Class rdf:about="&medienprojekt;educationalRequirement">
+        <rdfs:subClassOf rdf:resource="&medienprojekt;learningEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#educationalSubjects -->
+
+    <owl:Class rdf:about="&medienprojekt;educationalSubjects">
+        <rdfs:subClassOf rdf:resource="&medienprojekt;learningEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#instructionalPattern -->
+
+    <owl:Class rdf:about="&medienprojekt;instructionalPattern"/>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#instructor -->
+
+    <owl:Class rdf:about="&medienprojekt;instructor">
+        <rdfs:subClassOf rdf:resource="&medienprojekt;learningEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#knowledge -->
+
+    <owl:Class rdf:about="&medienprojekt;knowledge">
+        <rdfs:subClassOf rdf:resource="&medienprojekt;transfer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#learner -->
+
+    <owl:Class rdf:about="&medienprojekt;learner">
+        <rdfs:subClassOf rdf:resource="&medienprojekt;learningEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#learningActivity -->
+
+    <owl:Class rdf:about="&medienprojekt;learningActivity">
+        <rdfs:subClassOf rdf:resource="&medienprojekt;learningProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#learningEnvironment -->
+
+    <owl:Class rdf:about="&medienprojekt;learningEnvironment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#learningMaterials -->
+
+    <owl:Class rdf:about="&medienprojekt;learningMaterials">
+        <rdfs:subClassOf rdf:resource="&medienprojekt;learningEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#learningProcess -->
+
+    <owl:Class rdf:about="&medienprojekt;learningProcess"/>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#learningTool -->
+
+    <owl:Class rdf:about="&medienprojekt;learningTool">
+        <rdfs:subClassOf rdf:resource="&medienprojekt;learningEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#metadata -->
+
+    <owl:Class rdf:about="&medienprojekt;metadata"/>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#scenarios -->
+
+    <owl:Class rdf:about="&medienprojekt;scenarios"/>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#selfDeterminationDegree -->
+
+    <owl:Class rdf:about="&medienprojekt;selfDeterminationDegree">
+        <rdfs:subClassOf rdf:resource="&medienprojekt;learningProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#title -->
+
+    <owl:Class rdf:about="&medienprojekt;title">
+        <rdfs:subClassOf rdf:resource="&medienprojekt;metadata"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#transfer -->
+
+    <owl:Class rdf:about="&medienprojekt;transfer"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#GeochachesBotanischeGaerten -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;GeochachesBotanischeGaerten">
+        <rdf:type rdf:resource="&medienprojekt;scenarios"/>
+        <link rdf:datatype="&xsd;anyURI">http://www.lehrer-online.de/geocache-botanische-gaerten-ue.php?sid=29826275296857002245433443348420</link>
+        <usableIn rdf:resource="&medienprojekt;biology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#LernenAusLoesungsbeispielen -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;LernenAusLoesungsbeispielen">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#abcMethode -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;abcMethode">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#aktivesZuhoeren -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;aktivesZuhoeren">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#analyse -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;analyse">
+        <rdf:type rdf:resource="&medienprojekt;cognitiveProcess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#apolloTechnik -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;apolloTechnik">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#apply -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;apply">
+        <rdf:type rdf:resource="&medienprojekt;cognitiveProcess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#author1 -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;author1">
+        <rdf:type rdf:resource="&medienprojekt;author"/>
+        <lastname rdf:datatype="&xsd;string">Müller</lastname>
+        <firstname rdf:datatype="&xsd;string">Wolfgang</firstname>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#author2 -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;author2">
+        <rdf:type rdf:resource="&medienprojekt;author"/>
+        <firstname rdf:datatype="&xsd;string">Jörg</firstname>
+        <firstname rdf:datatype="&xsd;string">Stratmann</firstname>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#biology -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;biology">
+        <rdf:type rdf:resource="&medienprojekt;educationalSubjects"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#blitzlichMethode -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;blitzlichMethode">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#chemistry -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;chemistry">
+        <rdf:type rdf:resource="&medienprojekt;educationalSubjects"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#classSize -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;classSize">
+        <rdf:type rdf:resource="&medienprojekt;arrangement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#collaborative -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;collaborative">
+        <rdf:type rdf:resource="&medienprojekt;learningActivity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#collectiveNotebook -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;collectiveNotebook">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#communicative -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;communicative">
+        <rdf:type rdf:resource="&medienprojekt;competence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#computerScience -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;computerScience">
+        <rdf:type rdf:resource="&medienprojekt;educationalSubjects"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#conceptualKnowledge -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;conceptualKnowledge">
+        <rdf:type rdf:resource="&medienprojekt;knowledge"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#cooperative -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;cooperative">
+        <rdf:type rdf:resource="&medienprojekt;learningActivity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#create -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;create">
+        <rdf:type rdf:resource="&medienprojekt;cognitiveProcess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#deduktiveInduktiveVerfahren -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;deduktiveInduktiveVerfahren">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#deliberativeDemokratie -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;deliberativeDemokratie">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#dreiSchrittInterview -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;dreiSchrittInterview">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#economics -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;economics">
+        <rdf:type rdf:resource="&medienprojekt;educationalSubjects"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#english -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;english">
+        <rdf:type rdf:resource="&medienprojekt;educationalSubjects"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#entscheidungsfindung -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;entscheidungsfindung">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#ethics -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;ethics">
+        <rdf:type rdf:resource="&medienprojekt;educationalSubjects"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#evaluate -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;evaluate">
+        <rdf:type rdf:resource="&medienprojekt;cognitiveProcess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#externallyControlled -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;externallyControlled">
+        <rdf:type rdf:resource="&medienprojekt;selfDeterminationDegree"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#factualKnowledge -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;factualKnowledge">
+        <rdf:type rdf:resource="&medienprojekt;knowledge"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#fishbowl -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;fishbowl">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#flippedClassroom -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;flippedClassroom">
+        <rdf:type rdf:resource="&medienprojekt;instructionalPattern"/>
+        <link rdf:datatype="&xsd;anyURI">http://www.lehrer-online.de/flipped-classroom.php?sid=74769103604842756945623952395090</link>
+        <includes rdf:resource="&medienprojekt;apply"/>
+        <usableIn rdf:resource="&medienprojekt;biology"/>
+        <usableIn rdf:resource="&medienprojekt;chemistry"/>
+        <usableIn rdf:resource="&medienprojekt;economics"/>
+        <usableIn rdf:resource="&medienprojekt;english"/>
+        <usableIn rdf:resource="&medienprojekt;ethics"/>
+        <mediates rdf:resource="&medienprojekt;factualKnowledge"/>
+        <isImplementedIn rdf:resource="&medienprojekt;flippedClassroomVollstaendigeInduktion"/>
+        <usableIn rdf:resource="&medienprojekt;french"/>
+        <usableIn rdf:resource="&medienprojekt;german"/>
+        <usableIn rdf:resource="&medienprojekt;history"/>
+        <requires rdf:resource="&medienprojekt;individualWork"/>
+        <usableIn rdf:resource="&medienprojekt;mathematics"/>
+        <usableIn rdf:resource="&medienprojekt;musics"/>
+        <usableIn rdf:resource="&medienprojekt;physicalEducation"/>
+        <usableIn rdf:resource="&medienprojekt;physics"/>
+        <promotes rdf:resource="&medienprojekt;professional"/>
+        <promotes rdf:resource="&medienprojekt;reactive"/>
+        <includes rdf:resource="&medienprojekt;remember"/>
+        <usableIn rdf:resource="&medienprojekt;science"/>
+        <promotes rdf:resource="&medienprojekt;selfDirected"/>
+        <promotes rdf:resource="&medienprojekt;selfOrganized"/>
+        <usableIn rdf:resource="&medienprojekt;socialStudies"/>
+        <usableIn rdf:resource="&medienprojekt;spanish"/>
+        <includes rdf:resource="&medienprojekt;understand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#flippedClassroomLearningLogatithms -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;flippedClassroomLearningLogatithms">
+        <rdf:type rdf:resource="&medienprojekt;scenarios"/>
+        <link rdf:datatype="&xsd;anyURI">http://portal.opendiscoveryspace.eu/scenarios-view/AkTb6pn3W1fwRXv8hvgf0g$3D$$3D$</link>
+        <usableIn rdf:resource="&medienprojekt;mathematics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#flippedClassroomVollstaendigeInduktion -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;flippedClassroomVollstaendigeInduktion">
+        <rdf:type rdf:resource="&medienprojekt;scenarios"/>
+        <link rdf:datatype="&xsd;anyURI">http://wikis.zum.de/zum/PH_Heidelberg/Bausteine/Vollständige_Induktion</link>
+        <usableIn rdf:resource="&medienprojekt;mathematics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#framing -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;framing">
+        <rdf:type rdf:resource="&medienprojekt;learningActivity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#french -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;french">
+        <rdf:type rdf:resource="&medienprojekt;educationalSubjects"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#german -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;german">
+        <rdf:type rdf:resource="&medienprojekt;educationalSubjects"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#gruppenpuzzle -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;gruppenpuzzle">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#history -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;history">
+        <rdf:type rdf:resource="&medienprojekt;educationalSubjects"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#impulsreferat -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;impulsreferat">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#individualWork -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;individualWork">
+        <rdf:type rdf:resource="&medienprojekt;arrangement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#inmigractionAEspana -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;inmigractionAEspana">
+        <rdf:type rdf:resource="&medienprojekt;scenarios"/>
+        <link rdf:datatype="&xsd;anyURI">http://www.lehrer-online.de/inmigracion.php?sid=29826275296857002245433443345010</link>
+        <usableIn rdf:resource="&medienprojekt;spanish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#karussellgespraech -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;karussellgespraech">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#kreativesSchreiben -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;kreativesSchreiben">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#learningByDoing -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;learningByDoing">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#lehrgang -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;lehrgang">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#lehrkunst -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;lehrkunst">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#leittextmethode -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;leittextmethode">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#lernenAmModell -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;lernenAmModell">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#marktDerMoeglichkeiten -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;marktDerMoeglichkeiten">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#mathematics -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;mathematics">
+        <rdf:type rdf:resource="&medienprojekt;educationalSubjects"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#metacognitveKnowledge -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;metacognitveKnowledge">
+        <rdf:type rdf:resource="&medienprojekt;knowledge"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#methode635 -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;methode635">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#methodical -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;methodical">
+        <rdf:type rdf:resource="&medienprojekt;competence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#mindMap -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;mindMap">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#moderation -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;moderation">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#musics -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;musics">
+        <rdf:type rdf:resource="&medienprojekt;educationalSubjects"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#netzplantechnik -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;netzplantechnik">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#openSpace -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;openSpace">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#otherDirected -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;otherDirected">
+        <rdf:type rdf:resource="&medienprojekt;selfDeterminationDegree"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#pair -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;pair">
+        <rdf:type rdf:resource="&medienprojekt;arrangement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#papiercomputer -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;papiercomputer">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#parlamentarischesDebattieren -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;parlamentarischesDebattieren">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#physicalEducation -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;physicalEducation">
+        <rdf:type rdf:resource="&medienprojekt;educationalSubjects"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#physics -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;physics">
+        <rdf:type rdf:resource="&medienprojekt;educationalSubjects"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#pinwandmoderation -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;pinwandmoderation">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#placematActivity -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;placematActivity">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#planspiel -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;planspiel">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#primarWebQuest -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;primarWebQuest">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#proceduralKnowledge -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;proceduralKnowledge">
+        <rdf:type rdf:resource="&medienprojekt;knowledge"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#professional -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;professional">
+        <rdf:type rdf:resource="&medienprojekt;competence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#reactive -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;reactive">
+        <rdf:type rdf:resource="&medienprojekt;learningActivity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#receptive -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;receptive">
+        <rdf:type rdf:resource="&medienprojekt;learningActivity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#referat -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;referat">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#remember -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;remember">
+        <rdf:type rdf:resource="&medienprojekt;cognitiveProcess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#rollenspiel -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;rollenspiel">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#rueckmeldung -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;rueckmeldung">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#schneeballVerfahren -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;schneeballVerfahren">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#science -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;science">
+        <rdf:type rdf:resource="&medienprojekt;educationalSubjects"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#selfDetermined -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;selfDetermined">
+        <rdf:type rdf:resource="&medienprojekt;selfDeterminationDegree"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#selfDirected -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;selfDirected">
+        <rdf:type rdf:resource="&medienprojekt;selfDeterminationDegree"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#selfOrganized -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;selfOrganized">
+        <rdf:type rdf:resource="&medienprojekt;selfDeterminationDegree"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#smallgroup -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;smallgroup">
+        <rdf:type rdf:resource="&medienprojekt;arrangement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#social -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;social">
+        <rdf:type rdf:resource="&medienprojekt;competence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#socialStudies -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;socialStudies">
+        <rdf:type rdf:resource="&medienprojekt;educationalSubjects"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#spanish -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;spanish">
+        <rdf:type rdf:resource="&medienprojekt;educationalSubjects"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#stationenLernen -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;stationenLernen">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#storylineMethode -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;storylineMethode">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#surveyFeedback -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;surveyFeedback">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#szenarioTechnik -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;szenarioTechnik">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#teamteaching -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;teamteaching">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#understand -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;understand">
+        <rdf:type rdf:resource="&medienprojekt;cognitiveProcess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#virtualGroupPuzzle -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;virtualGroupPuzzle">
+        <rdf:type rdf:resource="&medienprojekt;instructionalPattern"/>
+        <link rdf:datatype="&xsd;anyURI">http://www.didaktische-design-patterns.de/new/VIB-Patterns_files/virtuelles_gruppenpuzzle.htm</link>
+        <isImplementedIn rdf:resource="&medienprojekt;GeochachesBotanischeGaerten"/>
+        <includes rdf:resource="&medienprojekt;apply"/>
+        <usableIn rdf:resource="&medienprojekt;biology"/>
+        <usableIn rdf:resource="&medienprojekt;chemistry"/>
+        <includes rdf:resource="&medienprojekt;collaborative"/>
+        <mediates rdf:resource="&medienprojekt;conceptualKnowledge"/>
+        <usableIn rdf:resource="&medienprojekt;economics"/>
+        <usableIn rdf:resource="&medienprojekt;english"/>
+        <usableIn rdf:resource="&medienprojekt;ethics"/>
+        <usableIn rdf:resource="&medienprojekt;french"/>
+        <usableIn rdf:resource="&medienprojekt;german"/>
+        <usableIn rdf:resource="&medienprojekt;history"/>
+        <isImplementedIn rdf:resource="&medienprojekt;inmigractionAEspana"/>
+        <usableIn rdf:resource="&medienprojekt;musics"/>
+        <usableIn rdf:resource="&medienprojekt;physicalEducation"/>
+        <usableIn rdf:resource="&medienprojekt;physics"/>
+        <usableIn rdf:resource="&medienprojekt;science"/>
+        <promotes rdf:resource="&medienprojekt;selfOrganized"/>
+        <requires rdf:resource="&medienprojekt;smallgroup"/>
+        <usableIn rdf:resource="&medienprojekt;socialStudies"/>
+        <usableIn rdf:resource="&medienprojekt;spanish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#visualisierung -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;visualisierung">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#wandzeitung -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;wandzeitung">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#webQuest -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;webQuest">
+        <rdf:type rdf:resource="&medienprojekt;instructionalPattern"/>
+        <link rdf:datatype="&xsd;anyURI">http://www.didaktische-design-patterns.de/new/VIB-Patterns_files/webquests.htm</link>
+        <usableIn rdf:resource="&medienprojekt;biology"/>
+        <usableIn rdf:resource="&medienprojekt;chemistry"/>
+        <usableIn rdf:resource="&medienprojekt;economics"/>
+        <usableIn rdf:resource="&medienprojekt;english"/>
+        <usableIn rdf:resource="&medienprojekt;ethics"/>
+        <usableIn rdf:resource="&medienprojekt;french"/>
+        <usableIn rdf:resource="&medienprojekt;german"/>
+        <usableIn rdf:resource="&medienprojekt;history"/>
+        <requires rdf:resource="&medienprojekt;individualWork"/>
+        <usableIn rdf:resource="&medienprojekt;musics"/>
+        <usableIn rdf:resource="&medienprojekt;physicalEducation"/>
+        <usableIn rdf:resource="&medienprojekt;physics"/>
+        <similarTo rdf:resource="&medienprojekt;primarWebQuest"/>
+        <usableIn rdf:resource="&medienprojekt;science"/>
+        <promotes rdf:resource="&medienprojekt;selfDirected"/>
+        <usableIn rdf:resource="&medienprojekt;socialStudies"/>
+        <usableIn rdf:resource="&medienprojekt;spanish"/>
+        <isImplementedIn rdf:resource="&medienprojekt;webQuestCalendar"/>
+        <isImplementedIn rdf:resource="&medienprojekt;webQuestShakespeare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#webQuestCalendar -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;webQuestCalendar">
+        <rdf:type rdf:resource="&medienprojekt;scenarios"/>
+        <link rdf:datatype="&xsd;anyURI">http://www.lehrer-online.de/webquest-kalender.php?sid=98964904671970946345397649771890</link>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#webQuestShakespeare -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;webQuestShakespeare">
+        <rdf:type rdf:resource="&medienprojekt;scenarios"/>
+        <link rdf:datatype="&xsd;anyURI">http://www.lehrer-online.de/shakespeare-webquest.php?sid=98964904671970946345397649765400</link>
+        <usableIn rdf:resource="&medienprojekt;english"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simon/ontologies/2016/1/medienprojekt#zukunftswerkstatt -->
+
+    <owl:NamedIndividual rdf:about="&medienprojekt;zukunftswerkstatt">
+        <rdf:type rdf:resource="&medienprojekt;didacticalMethod"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
