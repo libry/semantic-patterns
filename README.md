@@ -25,7 +25,7 @@ Additonal used Gems:
 ### 1. Jena Fuseki Database 2.3.1
 * Start the Jena Fuseki Server - run the `fuseki-server.bat` in your installation folder of the Jena Fuseki Server
 * Open `localhost:3030` in your Browser
-* Go to 'manage datasets' and add a new dataset. In order to work the dataset name should be `dataset` or you have to change the name in [`application.rb`](app/controllers/appliaction_controller.rb)  
+* Go to 'manage datasets' and add a new dataset. In order to work the dataset name should be `dataset` or you have to change the name in [`application_controller.rb`](app/controllers/application_controller.rb)  
 line `09 sparql = SPARQL::Client.new("http://localhost:3030/dataset/)`
 * Upload the new dataset - select files [`dataset.owl`](dataset.owl)
 
