@@ -38,9 +38,11 @@ line `09 sparql = SPARQL::Client.new("http://localhost:3030/dataset/)`
 
 ## Known Issus 
 * The asset pipeline for Javascrips and Stylesheets doesn't work properly
-* Sometimes the Dropdown doesn't work properly, you can't select a value 
+* Sometimes the Dropdown doesn't work properly, you can't select a value
+* ... 
 
 ## Development 
 * There should be a Message "No Resulst" if there is nothing found in the Database
 * A Funktion to create new database instances
+* ...
 
