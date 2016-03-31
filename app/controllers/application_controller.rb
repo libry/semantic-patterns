@@ -168,7 +168,7 @@ class ApplicationController < ActionController::Base
       ## Suchanfrage
   
   def search
-    sparql = SPARQL::Client.new("http://localhost:3030/medienprojekt/")    
+    sparql = SPARQL::Client.new("http://localhost:3030/dataset/")    
 
     query = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
              PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
