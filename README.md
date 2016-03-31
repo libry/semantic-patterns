@@ -25,9 +25,9 @@ Additonal used Gems:
 ### 1. Jena Fuseki Database 2.3.1
 * Start the Jena Fuseki Server - run the `fuseki-server.bat` in your installation folder of the Jena Fuseki Server
 * Open `localhost:3030` in your Browser
-* Go to 'manage datasets' and add a new dataset. In order to work the dataset name should be `dataset` or you have to change the name in [`application.rb`](../app/controllers/appliaction_controller.rb)  
+* Go to 'manage datasets' and add a new dataset. In order to work the dataset name should be `dataset` or you have to change the name in [`application_controller.rb`](app/controllers/application_controller.rb)  
 line `09 sparql = SPARQL::Client.new("http://localhost:3030/dataset/)`
-* Upload the new dataset - select files [`dataset.owl`](../dataset.owl)
+* Upload the new dataset - select files [`dataset.owl`](dataset.owl)
 
 ### 2. Ruby on Rails Server
 * Open Windows `cmd` go to the semantic-patterns folder 
@@ -36,7 +36,7 @@ line `09 sparql = SPARQL::Client.new("http://localhost:3030/dataset/)`
 ### 3. Website
 * Open `localhost:3000/application` in your Browser to view and use the website 
 
-## Known Issus 
+## Known Issues 
 * The asset pipeline for Javascrips and Stylesheets doesn't work properly
 * Sometimes the Dropdown doesn't work properly, you can't select a value
 * ... 
