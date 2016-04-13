@@ -165,6 +165,7 @@
                     			<p class="categories">Subject<a href="#search"  data-toggle="tooltip" data-placement="right" title="Please select the subject in which you want to use the Instructional Pattern."><span class="glyphicon glyphicon-info-sign" style="margin-left: 5px; margin-top: 2px"></span></a></p>
     								<select id="educationalSubjects" required class="btn btn-default dropdown-toggle searchbuttons form-control" class="form-control"  type="button" data-toggle="dropdown" >
   										<option value="" disabled selected>f.e. math...</option>
+  										<!-- insert the search options into the dropdown menu -->
   										<% for q in @educationalSubjects %>
 										<option value="<%= q[/medienprojekt#.*>,/][14..-3]%>"><%= q[/medienprojekt#.*>,/][14..-3]%></option>
 										<% end %>
@@ -179,6 +180,7 @@ Metacognitive knowledge: The students use strategies to deal with existing knowl
  "><span class="glyphicon glyphicon-info-sign" style="margin-left: 5px; margin-top: 2px"></span></a></p>
     						<select id="selfDeterminationDegree" required class="btn btn-default dropdown-toggle searchbuttons form-control" class="form-control" type="button" data-toggle="dropdown" >
   								<option value="" disabled selected>f.e. self organized...</option>
+	  								<!-- insert the search options into the dropdown menu -->
 	  								<% for q in @selfDeterminationDegree %>
 									<option value="<%= q[/medienprojekt#.*>/][14..-5]%>"><%= q[/medienprojekt#.*>/][14..-5]%></option>
 									<% end %>
@@ -196,6 +198,7 @@ Analyse: The students are able to order materials in their single parts and defi
 Create:  The students are able to bring elements together to a new, coherent and functional whole thing."><span class="glyphicon glyphicon-info-sign" style="margin-left: 5px; margin-top: 2px"></span></a></p>
     						<select id="cognitiveProcess" required class="btn btn-default dropdown-toggle searchbuttons form-control" class="form-control" type="button" data-toggle="dropdown" >
   								<option value="" disabled selected>f.e. remember...</option>
+	  								<!-- insert the search options into the dropdown menu -->
 	  								<% for q in @cognitiveProcess %>
 									<option value="<%= q[/medienprojekt#.*>,/][14..-3]%>"><%= q[/medienprojekt#.*>,/][14..-3]%></option>
 									<% end %>
@@ -209,6 +212,7 @@ Procedural knowledge: The students can design processes, analyze structures, lin
 Metacognitive knowledge: The students use strategies to deal with existing knowledge and combine process steps to reach a learning objective."><span class="glyphicon glyphicon-info-sign" style="margin-left: 5px; margin-top: 2px"></span></a></p>
     						<select id="knowledge" required class="btn btn-default dropdown-toggle searchbuttons form-control" class="form-control" type="button" data-toggle="dropdown" >
   								<option value="" disabled selected>f.e. factual knowledge...</option>
+	  								<!-- insert the search options into the dropdown menu -->
 	  								<% for q in @knowledge %>
 									<option value="<%= q[/medienprojekt#.*>,/][14..-3]%>"><%= q[/medienprojekt#.*>,/][14..-3]%></option>
 									<% end %>
@@ -223,6 +227,7 @@ Metacognitive knowledge: The students use strategies to deal with existing knowl
                     			Class size: The students work all together in class."><span class="glyphicon glyphicon-info-sign" style="margin-left: 5px; margin-top: 2px"></span></a></p>
     						<select id="arrangement" required class="btn btn-default dropdown-toggle searchbuttons form-control" class="form-control" type="button" data-toggle="dropdown" >
   								<option value="" disabled selected>f.e. groupwork...</option>
+	  								<!-- insert the search options into the dropdown menu -->
 	  								<% for q in @arrangement %>
 									<option value="<%= q[/medienprojekt#.*>,/][14..-3]%>"><%= q[/medienprojekt#.*>,/][14..-3]%></option>
 									<% end %>
