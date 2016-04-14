@@ -8,20 +8,9 @@
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
-      /*!
-      *  $('html, body').stop().animate({
-      *      scrollTop: $($anchor.attr('href')).offset().top
-      *  }, 1500, 'easeInOutExpo');
-      */
-        // get target div to scroll to
-		var target = $($anchor.attr('href'));
-		// if target is valid, scroll to
-		if(target && target.offset()){
-	    $('html, body').stop().animate({
-        scrollTop: target.offset().top
-    	}, 850,'easeInOutExpo');
-		}
-        
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
 });
@@ -29,7 +18,7 @@ $(function() {
 // Highlight the top nav as scrolling occurs
 $('body').scrollspy({
     target: '.navbar-fixed-top'
-});
+})
 
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
@@ -37,11 +26,13 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 
+// Open Tooltips by hover the questionmark netx to search categories - manuell hingefügt
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
 });
 
 
+// Fade In the section by scrolling down - manuell hinzugefügt
 $(document).ready(function(){
   
  
@@ -68,4 +59,9 @@ $(document).ready(function(){
   });
 
 
-
+$(document).ready(function(){
+    $(".searchgo").click(function(){
+        $(".noresults").fadeOut()
+    });
+  
+});

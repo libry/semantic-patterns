@@ -9,8 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-
-        
+    <title>E SIT 4 SIP</title>
+ 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -34,7 +34,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top" ><%= image_tag "logo_header.png", size:"51", :class => "header_image" %>E SIT 4 SIP</a>
-             </div>
+            </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -90,13 +90,9 @@
                 <a href="#create" class="page-scroll btn btn-xl">Create</a>
   
         </div>
-        
-       
-      		
-
-
-        
     </header>
+    
+    <!-- Glyphicon Arrow - Navigation Scroll Down -->
     <div class="container">
     	<div class="row">
     		<div class="col-md-12">
@@ -105,8 +101,6 @@
     	</div>
     </div>
     
-   
-    <!--<p style="padding: 15px 587px 5px 587px"><span class="glyphicon glyphicon-menu-down pfeil"></span></p>-->
  
     <!-- About Instructional Pattern Section -->
     <section id="aboutpattern" class="bg-light-gray about">
@@ -160,7 +154,7 @@
         	<div class="row text-left about">
                 <div class="col-md-6" style="padding-right: 60px">   
                     <h2 class="search-heading text-left">SEARCH CATEGORIES</h2>
-                    	<p class="text-muted text-justify" style="font-family: Aparijita-Italic">Search and find the matching Instructional Patterns for your lesson in our data base. The search is made via didactical criteria which you choose in the drop-down menus. For your search you can choose up to five criteria to specify your result. To get an overview of all Instructional Patterns please use the glossary.</h6>
+                    	<p class="text-muted text-justify" style="font-family: Aparijita-Italic">Search and find the matching Instructional Patterns for your lesson in our data base. The search is made via didactical criteria which you choose in the drop-down menus. For your search you can choose up to five criteria to specify your result. To get an overview of all Instructional Patterns please use the glossary.</p>
                     		<div class="dropdown">
                     			<p class="categories">Subject<a href="#search"  data-toggle="tooltip" data-placement="right" title="Please select the subject in which you want to use the Instructional Pattern."><span class="glyphicon glyphicon-info-sign" style="margin-left: 5px; margin-top: 2px"></span></a></p>
     								<select id="educationalSubjects" required class="btn btn-default dropdown-toggle searchbuttons form-control" class="form-control"  type="button" data-toggle="dropdown" >
@@ -173,78 +167,82 @@
   							</div>    
   							<div class="dropdown">
   								<p class="categories">Degree of self-determined learning<a href="#search" data-toggle="tooltip" data-placement="right" title=" The options describe the kind of knowledge that should be taught.
-                    Factual knowledge: The students know basic disciplinary elements of knowledge.
-Conceptual knowledge: The students prove that they understood the learned facts in wider context to make use of them in new exercises.
-Procedural knowledge: The students can design processes, analyze structures, link existing with new knowledge and develop hypothesis.
-Metacognitive knowledge: The students use strategies to deal with existing knowledge and combine process steps to reach a learning objective.
- "><span class="glyphicon glyphicon-info-sign" style="margin-left: 5px; margin-top: 2px"></span></a></p>
-    						<select id="selfDeterminationDegree" required class="btn btn-default dropdown-toggle searchbuttons form-control" class="form-control" type="button" data-toggle="dropdown" >
-  								<option value="" disabled selected>f.e. self organized...</option>
+                    																																			Factual knowledge: The students know basic disciplinary elements of knowledge.
+																																								Conceptual knowledge: The students prove that they understood the learned facts in wider context to make use of them in new exercises.
+																																								Procedural knowledge: The students can design processes, analyze structures, link existing with new knowledge and develop hypothesis.
+																																								Metacognitive knowledge: The students use strategies to deal with existing knowledge and combine process steps to reach a learning objective. ">
+									<span class="glyphicon glyphicon-info-sign" style="margin-left: 5px; margin-top: 2px"></span></a>
+								</p>
+								
+								<!-- Search Categories -->
+    							<select id="selfDeterminationDegree" required class="btn btn-default dropdown-toggle searchbuttons form-control" class="form-control" type="button" data-toggle="dropdown" >
+  									<option value="" disabled selected>f.e. self organized...</option>
 	  								<!-- insert the search options into the dropdown menu -->
 	  								<% for q in @selfDeterminationDegree %>
 									<option value="<%= q[/medienprojekt#.*>/][14..-5]%>"><%= q[/medienprojekt#.*>/][14..-5]%></option>
 									<% end %>
 							</select>
-  						</div> 
-  						<div class="dropdown">
-  							<p class="categories">Cognitive process<a href="#search" data-toggle="tooltip" data-placement="right" title="
-?                 The options arise from the taxonomy of Anderson and Krathwohl. The options describe the relevant cognitive process underlying the achievement of a learning objective. The options are hierarchically and every step contains the previous dimensions.
-                    Remember: The students can remember relevant knowledge from their long-term memory.
-Understand: The students recognize the meaning/relevance of knowledge by linking new knowledge with existing knowledge.
-Apply: The students are able to use specific methods in suitable situations.
-Analyse: The students are able to order materials in their single parts and define their relation to higher-leveled structures.
-                    Evaluate: The students are able to pass sentence on the basis of criteria and standards.
+  							</div> 
+  							
+  							<div class="dropdown">
+  								<p class="categories">Cognitive process<a href="#search" data-toggle="tooltip" data-placement="right" title="The options arise from the taxonomy of Anderson and Krathwohl. The options describe the relevant cognitive process underlying the achievement of a learning objective. The options are hierarchically and every step contains the previous dimensions.
+                    																														Remember: The students can remember relevant knowledge from their long-term memory.
+																																			Understand: The students recognize the meaning/relevance of knowledge by linking new knowledge with existing knowledge.
+																																			Apply: The students are able to use specific methods in suitable situations.
+																																			Analyse: The students are able to order materials in their single parts and define their relation to higher-leveled structures.
+                    																														Evaluate: The students are able to pass sentence on the basis of criteria and standards.
                     
-Create:  The students are able to bring elements together to a new, coherent and functional whole thing."><span class="glyphicon glyphicon-info-sign" style="margin-left: 5px; margin-top: 2px"></span></a></p>
-    						<select id="cognitiveProcess" required class="btn btn-default dropdown-toggle searchbuttons form-control" class="form-control" type="button" data-toggle="dropdown" >
-  								<option value="" disabled selected>f.e. remember...</option>
-	  								<!-- insert the search options into the dropdown menu -->
-	  								<% for q in @cognitiveProcess %>
-									<option value="<%= q[/medienprojekt#.*>,/][14..-3]%>"><%= q[/medienprojekt#.*>,/][14..-3]%></option>
-									<% end %>
-							</select>
-  						</div> 
-  						<div class="dropdown">
-  							<p class="categories">Knowledge<a href="#search" data-toggle="tooltip" data-placement="right" title="The options describe the kind of knowledge that should be taught.
-                    Factual knowledge: The students know basic disciplinary elements of knowledge.
-Conceptual knowledge: The students prove that they understood the learned facts in wider context to make use of them in new exercises.
-Procedural knowledge: The students can design processes, analyze structures, link existing with new knowledge and develop hypothesis.
-Metacognitive knowledge: The students use strategies to deal with existing knowledge and combine process steps to reach a learning objective."><span class="glyphicon glyphicon-info-sign" style="margin-left: 5px; margin-top: 2px"></span></a></p>
-    						<select id="knowledge" required class="btn btn-default dropdown-toggle searchbuttons form-control" class="form-control" type="button" data-toggle="dropdown" >
-  								<option value="" disabled selected>f.e. factual knowledge...</option>
-	  								<!-- insert the search options into the dropdown menu -->
-	  								<% for q in @knowledge %>
-									<option value="<%= q[/medienprojekt#.*>,/][14..-3]%>"><%= q[/medienprojekt#.*>,/][14..-3]%></option>
-									<% end %>
-							</select>
-  						</div> 
-  						<div class="dropdown">
-  							<p class="categories">Arrangement<a href="#"  data-toggle="tooltip" data-placement="right" title="Please select how 
-  								the students should work together in your lesson.
-                    			Individual work: Each student works on its own.
-                    			Pair: The students work together in pairs.
-                    			Single group: The students work together in groups of 3-7 persons.
-                    			Class size: The students work all together in class."><span class="glyphicon glyphicon-info-sign" style="margin-left: 5px; margin-top: 2px"></span></a></p>
-    						<select id="arrangement" required class="btn btn-default dropdown-toggle searchbuttons form-control" class="form-control" type="button" data-toggle="dropdown" >
-  								<option value="" disabled selected>f.e. groupwork...</option>
-	  								<!-- insert the search options into the dropdown menu -->
-	  								<% for q in @arrangement %>
-									<option value="<%= q[/medienprojekt#.*>,/][14..-3]%>"><%= q[/medienprojekt#.*>,/][14..-3]%></option>
-									<% end %>
-							</select>
-  						</div> 
-  						<p style="text-align: right" onclick="search()"> <a href="#results" type="button" class="page-scroll btn btn-xl searchgo">
-    						<span class="glyphicon glyphicon-search"></span> Search
- 						</a></p>         
+																																			Create:  The students are able to bring elements together to a new, coherent and functional whole thing."><span class="glyphicon glyphicon-info-sign" style="margin-left: 5px; margin-top: 2px"></span></a></p>
+    							<select id="cognitiveProcess" required class="btn btn-default dropdown-toggle searchbuttons form-control" class="form-control" type="button" data-toggle="dropdown" >
+  									<option value="" disabled selected>f.e. remember...</option>
+	  									<!-- insert the search options into the dropdown menu -->
+	  									<% for q in @cognitiveProcess %>
+										<option value="<%= q[/medienprojekt#.*>,/][14..-3]%>"><%= q[/medienprojekt#.*>,/][14..-3]%></option>
+										<% end %>
+								</select>
+  							</div> 
+  							
+  							<div class="dropdown">
+  								<p class="categories">Knowledge<a href="#search" data-toggle="tooltip" data-placement="right" title="The options describe the kind of knowledge that should be taught.
+																																	Factual knowledge: The students know basic disciplinary elements of knowledge.
+																																	Conceptual knowledge: The students prove that they understood the learned facts in wider context to make use of them in new exercises.
+																																	Procedural knowledge: The students can design processes, analyze structures, link existing with new knowledge and develop hypothesis.
+																																	Metacognitive knowledge: The students use strategies to deal with existing knowledge and combine process steps to reach a learning objective.">
+									<span class="glyphicon glyphicon-info-sign" style="margin-left: 5px; margin-top: 2px"></span></a>
+								</p>
+    							<select id="knowledge" required class="btn btn-default dropdown-toggle searchbuttons form-control" class="form-control" type="button" data-toggle="dropdown" >
+  									<option value="" disabled selected>f.e. factual knowledge...</option>
+	  									<!-- insert the search options into the dropdown menu -->
+	  									<% for q in @knowledge %>
+										<option value="<%= q[/medienprojekt#.*>,/][14..-3]%>"><%= q[/medienprojekt#.*>,/][14..-3]%></option>
+										<% end %>
+								</select>
+  							</div> 
+	  						<div class="dropdown">
+	  							<p class="categories">Arrangement<a href="#"  data-toggle="tooltip" data-placement="right" title="Please select how 
+	  								the students should work together in your lesson.
+	                    			Individual work: Each student works on its own.
+	                    			Pair: The students work together in pairs.
+	                    			Single group: The students work together in groups of 3-7 persons.
+	                    			Class size: The students work all together in class."><span class="glyphicon glyphicon-info-sign" style="margin-left: 5px; margin-top: 2px"></span></a></p>
+    							<select id="arrangement" required class="btn btn-default dropdown-toggle searchbuttons form-control" class="form-control" type="button" data-toggle="dropdown" >
+  									<option value="" disabled selected>f.e. groupwork...</option>
+	  									<!-- insert the search options into the dropdown menu -->
+	  									<% for q in @arrangement %>
+										<option value="<%= q[/medienprojekt#.*>,/][14..-3]%>"><%= q[/medienprojekt#.*>,/][14..-3]%></option>
+										<% end %>
+								</select>
+	  						</div> 
+	  						<p style="text-align: right" onclick="search()"> <a href="#results" type="button" class="page-scroll btn btn-xl searchgo">
+	    						<span class="glyphicon glyphicon-search"></span> Search
+	 						</a></p>         
   				</div>
   				
+  				<!-- Glossary -->
                 <div class="col-md-6">
                 	<h2 class="search-heading text-left">GLOSSARY</h2>
-                	 <p class="text-muted text-justify" style="font-family: Aparijita-Italic">
+                	 <p class="text-muted text-justify" style="font-family: Aparijita-Italic">The glossary shows you all instructional pattern of our data base and gives you an idea of what you can find. If you want to know more about one instructional pattern, click the appropriate link. Moreover the glossary helps you to find an instructional pattern on the basis of its author.</p>
 
-
-The glossary shows you all instructional pattern of our data base and gives you an idea of what you can find. If you want to know more about one instructional pattern, click the appropriate link. Moreover the glossary helps you to find an instructional pattern on the basis of its author.
- </h6>
                     <ul class="nav nav-tabs" style="margin-top: 30px">
  						<li class="active"><a data-toggle="tab" href="#ac" class="tabwidth">A-C</a></li>
   						<li><a data-toggle="tab" href="#df" class="tabwidth">D-F</a></li>
@@ -484,13 +482,15 @@ The glossary shows you all instructional pattern of our data base and gives you 
 				</div>
   
                 </div>
-             <div class="container hideme">
-    			<div class="row">
-    				<div class="col-md-12">
-    					<a href="#results"><span class="glyphicon glyphicon-menu-down pfeil" style="margin: 30px 49% 30px 49%"></span></a>
-    				</div>
-    			</div>
-    		</div>
+                
+             <!-- Glyphicon Arrow - Navigation Scroll Down -->
+	             <div class="container hideme">
+	    			<div class="row">
+	    				<div class="col-md-12">
+	    					<a href="#results"><span class="glyphicon glyphicon-menu-down pfeil" style="margin: 30px 49% 30px 49%"></span></a>
+	    				</div>
+	    			</div>
+	    		</div>
   
                
             </div>
@@ -503,64 +503,56 @@ The glossary shows you all instructional pattern of our data base and gives you 
     <section id="results" >
         <div class="container">
             <div class="row text-left about">
-            	
                 <div class="col-md-6">
-                   
                    <div style="width: 100%; height: 78%; background-color:#FFFFFF;font-family: 'Amatic-Bold'; border: 1px solid #ADADAD; text-align: center; padding: 15px;">
-  						<a href="#webquest" data-toggle="modal" data-target="#webquest" style="font-size:55px;text-decoration:none; color: #C6E3D7;">WEBQUEST</a>  
-   						<a href="#virtualgrouppuzzle" data-toggle="modal" data-target="#virtualgrouppuzzle" style="font-size:45px;text-decoration:none; color: #C6E3D7;">spanish</a>  
-   						<a href="#flippedclassroom" data-toggle="modal" data-target="#flippedclassroom" style="font-size:24px;text-decoration:none; color: #C6E3D7;">Factual Knowledge</a>  
-   						<a href="#virtualgrouppuzzle" data-toggle="modal" data-target="#virtualgrouppuzzle" style="font-size:60px;text-decoration:none; color: #82958D;">Conceptual knowledge</a>  
-   						<a href="#virtualgrouppuzzle" data-toggle="modal" data-target="#virtualgrouppuzzle" style="font-size:19px;text-decoration:none; color: #82958D;">self-organized</a>  
-   						<a href="#webquest" data-toggle="modal" data-target="#webquest" style="font-size:19px;text-decoration:none; color: #333333;">english</a>  
-   						<a href="#virtualgrouppuzzle" data-toggle="modal" data-target="#virtualgrouppuzzle" style="font-size:50px;text-decoration:none; color: #333333;">small groups</a>  
-   						<a href="#virtualgrouppuzzle" data-toggle="modal" data-target="#virtualgrouppuzzle" style="font-size:19px;text-decoration:none; color: #82958D;">VIRTUAL GROUP PUZZLE</a>  
-   						<a href="#flippedclassroom" sdata-toggle="modal" data-target="#flippedclassroom" tyle="font-size:24px;text-decoration:none; color: #333333;">Math</a>  
-   						<a href="#flippedclassroom" data-toggle="modal" data-target="#flippedclassroom" style="font-size:24px;text-decoration:none; color: #388366;">remember</a>  
-   						<a href="#flippedclassroom" style="font-size:45px;text-decoration:none; color: #333333;">individual work</a>  
-   						<a href="#virtualgrouppuzzle" data-toggle="modal" data-target="#virtualgrouppuzzle" style="font-size:34px;text-decoration:none; color: #388366;">apply</a>  
-   						<a href="#flippedclassroom" data-toggle="modal" data-target="#flippedclassroom" style="font-size:14px;text-decoration:none; color: #82958D;">self-directed</a>  
-   						<a href="#flippedclassroom"  data-toggle="modal" data-target="#flippedclassroom" style="font-size:29px;text-decoration:none; color: #C6E3D7;">FLIPPED CLASSROOM</a>
-   						<a href="#webquest" data-toggle="modal" data-target="#webquest" style="font-size:55px;text-decoration:none; color: #C6E3D7;">WEBQUEST</a>  
-   						<a href="#virtualgrouppuzzle" data-toggle="modal" data-target="#virtualgrouppuzzle" style="font-size:45px;text-decoration:none; color: #C6E3D7;">spanish</a>  
-						<a href="#flippedclassroom" data-toggle="modal" data-target="#flippedclassroom" style="font-size:24px;text-decoration:none; color: #C6E3D7;">Factual Knowledge</a>  
-						<a href="#virtualgrouppuzzle" data-toggle="modal" data-target="#virtualgrouppuzzle" style="font-size:60px;text-decoration:none; color: #82958D;">Conceptual knowledge</a>  
-						<a href="#virtualgrouppuzzle" data-toggle="modal" data-target="#virtualgrouppuzzle" style="font-size:19px;text-decoration:none; color: #82958D;">self-organized</a>  
-						<a href="#webquest" data-toggle="modal" data-target="#webquest" style="font-size:19px;text-decoration:none; color: #333333;">english</a>  
-						<a href="#virtualgrouppuzzle" data-toggle="modal" data-target="#virtualgrouppuzzle" style="font-size:50px;text-decoration:none; color: #333333;">small groups</a>  
-						<a href="#virtualgrouppuzzle" data-toggle="modal" data-target="#virtualgrouppuzzle" style="font-size:19px;text-decoration:none; color: #82958D;">VIRTUAL GROUP PUZZLE</a>  
-						<a href="#flippedclassroom" sdata-toggle="modal" data-target="#flippedclassroom" tyle="font-size:24px;text-decoration:none; color: #333333;">Math</a>  
-						<a href="#flippedclassroom" data-toggle="modal" data-target="#flippedclassroom" style="font-size:24px;text-decoration:none; color: #388366;">remember</a>  
-						<a href="#flippedclassroom" style="font-size:45px;text-decoration:none; color: #333333;">individual work</a>  
-						<a href="#virtualgrouppuzzle" data-toggle="modal" data-target="#virtualgrouppuzzle" style="font-size:34px;text-decoration:none; color: #388366;">apply</a>  
-						<a href="#flippedclassroom" data-toggle="modal" data-target="#flippedclassroom" style="font-size:14px;text-decoration:none; color: #82958D;">self-directed</a>  
-						<a href="#flippedclassroom"  data-toggle="modal" data-target="#flippedclassroom" style="font-size:29px;text-decoration:none; color: #C6E3D7;">FLIPPED CLASSROOM</a>    
-					</div>
+					   <a href="#webquest" data-toggle="modal" data-target="#webquest" style="font-size:55px;text-decoration:none; color: #C6E3D7;">WEBQUEST</a>  
+					   <a href="#virtualgrouppuzzle" data-toggle="modal" data-target="#virtualgrouppuzzle" style="font-size:45px;text-decoration:none; color: #C6E3D7;">spanish</a>  
+					   <a href="#flippedclassroom" data-toggle="modal" data-target="#flippedclassroom" style="font-size:24px;text-decoration:none; color: #C6E3D7;">Factual Knowledge</a>  
+					   <a href="#virtualgrouppuzzle" data-toggle="modal" data-target="#virtualgrouppuzzle" style="font-size:60px;text-decoration:none; color: #82958D;">Conceptual knowledge</a>  
+					   <a href="#virtualgrouppuzzle" data-toggle="modal" data-target="#virtualgrouppuzzle" style="font-size:19px;text-decoration:none; color: #82958D;">self-organized</a>  
+					   <a href="#webquest" data-toggle="modal" data-target="#webquest" style="font-size:19px;text-decoration:none; color: #333333;">english</a>  
+					   <a href="#virtualgrouppuzzle" data-toggle="modal" data-target="#virtualgrouppuzzle" style="font-size:50px;text-decoration:none; color: #333333;">small groups</a>  
+					   <a href="#virtualgrouppuzzle" data-toggle="modal" data-target="#virtualgrouppuzzle" style="font-size:19px;text-decoration:none; color: #82958D;">VIRTUAL GROUP PUZZLE</a>  
+					   <a href="#flippedclassroom" sdata-toggle="modal" data-target="#flippedclassroom" tyle="font-size:24px;text-decoration:none; color: #333333;">Math</a>  
+					   <a href="#flippedclassroom" data-toggle="modal" data-target="#flippedclassroom" style="font-size:24px;text-decoration:none; color: #388366;">remember</a>  
+					   <a href="#flippedclassroom" style="font-size:45px;text-decoration:none; color: #333333;">individual work</a>  
+					   <a href="#virtualgrouppuzzle" data-toggle="modal" data-target="#virtualgrouppuzzle" style="font-size:34px;text-decoration:none; color: #388366;">apply</a>  
+					   <a href="#flippedclassroom" data-toggle="modal" data-target="#flippedclassroom" style="font-size:14px;text-decoration:none; color: #82958D;">self-directed</a>  
+					   <a href="#flippedclassroom"  data-toggle="modal" data-target="#flippedclassroom" style="font-size:29px;text-decoration:none; color: #C6E3D7;">FLIPPED CLASSROOM</a>
+					   <a href="#webquest" data-toggle="modal" data-target="#webquest" style="font-size:55px;text-decoration:none; color: #C6E3D7;">WEBQUEST</a>  
+					   <a href="#virtualgrouppuzzle" data-toggle="modal" data-target="#virtualgrouppuzzle" style="font-size:45px;text-decoration:none; color: #C6E3D7;">spanish</a>  
+					   <a href="#flippedclassroom" data-toggle="modal" data-target="#flippedclassroom" style="font-size:24px;text-decoration:none; color: #C6E3D7;">Factual Knowledge</a>  
+					   <a href="#virtualgrouppuzzle" data-toggle="modal" data-target="#virtualgrouppuzzle" style="font-size:60px;text-decoration:none; color: #82958D;">Conceptual knowledge</a>  
+					   <a href="#virtualgrouppuzzle" data-toggle="modal" data-target="#virtualgrouppuzzle" style="font-size:19px;text-decoration:none; color: #82958D;">self-organized</a>  
+					   <a href="#webquest" data-toggle="modal" data-target="#webquest" style="font-size:19px;text-decoration:none; color: #333333;">english</a>  
+					   <a href="#virtualgrouppuzzle" data-toggle="modal" data-target="#virtualgrouppuzzle" style="font-size:50px;text-decoration:none; color: #333333;">small groups</a>  
+					   <a href="#virtualgrouppuzzle" data-toggle="modal" data-target="#virtualgrouppuzzle" style="font-size:19px;text-decoration:none; color: #82958D;">VIRTUAL GROUP PUZZLE</a>  
+					   <a href="#flippedclassroom" sdata-toggle="modal" data-target="#flippedclassroom" tyle="font-size:24px;text-decoration:none; color: #333333;">Math</a>  
+					   <a href="#flippedclassroom" data-toggle="modal" data-target="#flippedclassroom" style="font-size:24px;text-decoration:none; color: #388366;">remember</a>  
+					   <a href="#flippedclassroom" style="font-size:45px;text-decoration:none; color: #333333;">individual work</a>  
+					   <a href="#virtualgrouppuzzle" data-toggle="modal" data-target="#virtualgrouppuzzle" style="font-size:34px;text-decoration:none; color: #388366;">apply</a>  
+					   <a href="#flippedclassroom" data-toggle="modal" data-target="#flippedclassroom" style="font-size:14px;text-decoration:none; color: #82958D;">self-directed</a>  
+					   <a href="#flippedclassroom"  data-toggle="modal" data-target="#flippedclassroom" style="font-size:29px;text-decoration:none; color: #C6E3D7;">FLIPPED CLASSROOM</a>    
 				</div>
-				
-	            <div class="col-md-6">
-                   
+			</div>
+               <div class="col-md-6">
                     <h2 class="search-heading text-left">RESULTS</h2>
 					<br>
 						<ol>
                 	    <div id="resultList"></div>
                 	    </ol>
-                        <p style="text-align: center "onclick="javascript:location.reload(true)"> <a href="#search" type="button" class="page-scroll btn btn-xl searchgo"><span class="glyphicon glyphicon-search"></span> New Search</a></p>  
-                    
-                </div>
-               
+                    <p style="text-align: center" onclick="javascript:location.reload(true)"><a href="#search" type="button" class="page-scroll btn btn-xl searchgo"><span class="glyphicon glyphicon-search"></span> New Search</a></p>
+               </div>
             </div>
-          
  						
- 						
-         <div class="container hideme">
-    				<div class="row">
-    					<div class="col-md-12">
-    						<a href="#aboutproject"><span class="glyphicon glyphicon-menu-down pfeil" style="margin: 30px 47.5% 30px 47.5%"></span></a>
-    					</div>
-    				</div>
-   				 </div>
-        </div>
+	         <div class="container hideme">
+	    				<div class="row">
+	    					<div class="col-md-12">
+	    						<a href="#aboutproject"><span class="glyphicon glyphicon-menu-down pfeil" style="margin: 30px 47.5% 30px 47.5%"></span></a>
+	    					</div>
+	    				</div>
+	   				 </div>
+	        </div>
     </section>
  
     <!-- About the Project-->
@@ -577,33 +569,30 @@ The glossary shows you all instructional pattern of our data base and gives you 
    				 </div>
                 <div class="col-lg-12 text-center">
                     <h2 class="search-heading">ABOUT THE PROJECT</h2>
-                    <!--<h3 class="section-subheading text-muted">Didactical Patterns as Best Practices</h3>-->
                 </div>
             </div>
+            
             <div class="row text-center">
                 <div class="col-md-6">
-                   
                     <h4 class="service-heading text-left">Background</h4>
                     <p class="text-muted text-justify" style="margin-bottom: 0px">
-Results emerging from multiple research projects have been showing promising possibilities for the inclusion of ICT in schools. However, the actual adoption of ICT in schools is much less successful. We believe that two important factors concern:</p>
-<p class="text-muted text-justify" style=" margin: 0px">&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-ok" style="color: #ABC9BE"></span>&nbsp;&nbsp;The need to foster knowledge in schools regarding the connections between their existing technological infrastructure, its potential for teaching and the possibility of repurposing these technologies in accordance with concrete pedagogical goals.</p>
-<p class="text-muted text-justify" style=" margin: 0px">&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-ok" style="color: #ABC9BE"></span>&nbsp;The need to foster knowledge in schools concerning the need to implement sustainable ICT policies, acknowledging digital technologies trends, novel pedagogical practices and empowering primary users and relevant stakeholders.</p>
-<p class="text-muted text-justify">The project´s partners are departments from University Education of Weingarten (Germany), the Open University of Cyprus (Cyprus) an Linnaeus University (Sweden).</p>
-					
+					Results emerging from multiple research projects have been showing promising possibilities for the inclusion of ICT in schools. However, the actual adoption of ICT in schools is much less successful. We believe that two important factors concern:</p>
+					<p class="text-muted text-justify" style=" margin: 0px">&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-ok" style="color: #ABC9BE"></span>&nbsp;&nbsp;The need to foster knowledge in schools regarding the connections between their existing technological infrastructure, its potential for teaching and the possibility of repurposing these technologies in accordance with concrete pedagogical goals.</p>
+					<p class="text-muted text-justify" style=" margin: 0px">&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-ok" style="color: #ABC9BE"></span>&nbsp;The need to foster knowledge in schools concerning the need to implement sustainable ICT policies, acknowledging digital technologies trends, novel pedagogical practices and empowering primary users and relevant stakeholders.</p>
+					<p class="text-muted text-justify">The project´s partners are departments from University Education of Weingarten (Germany), the Open University of Cyprus (Cyprus) an Linnaeus University (Sweden).</p>		
                 </div>
                 <div class="col-md-6">
-                    
                     <h4 class="service-heading text-left">Goals</h4>
                     <p class="text-muted text-justify" style="margin-bottom: 0px">This website offers teachers many advantages and suggestions to use Instructional Patterns.
-Using this website means ...
-<p class="text-muted text-justify" style=" margin: 0px">&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-ok" style="color: #ABC9BE"></span>&nbsp;&nbsp;helping teachers to choose suitable Instructional Patterns for their lessons</p>
-<p class="text-muted text-justify" style=" margin: 0px">&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-ok" style="color: #ABC9BE"></span>&nbsp;&nbsp;learning more about Instructional Patterns and how they could be used</p>
-<p class="text-muted text-justify" style=" margin: 0px">&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-ok" style="color: #ABC9BE"></span>&nbsp;&nbsp;increasing the didactical variety of lessons</p>
-<p class="text-muted text-justify" style=" margin: 0px">&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-ok" style="color: #ABC9BE"></span>&nbsp;&nbsp;facilitating the use of digital media in the teaching lessons</p>
-<p class="text-muted text-justify" style=" margin: 0px">&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-ok" style="color: #ABC9BE"></span>&nbsp;&nbsp;getting an overview of the different Instructional Patterns</p>
-<p class="text-muted text-justify" style=" margin: 0px">&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-ok" style="color: #ABC9BE"></span>&nbsp;&nbsp;creating your own Instructional Pattern and share it with other teachers</p>
-<p class="text-muted text-justify" style=" margin: 0px">&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-ok" style="color: #ABC9BE"></span>&nbsp;&nbsp;learning more about the promising project “e SIT 4 SIP“ with its long term benefits:</p>
-<p class="text-muted text-justify">“We firmly believe that the project’s results will provide a set of tools that will enable schools to reflect on their current ICT strategies and pedagogical goals“.</p>
+					Using this website means ...
+					<p class="text-muted text-justify" style=" margin: 0px">&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-ok" style="color: #ABC9BE"></span>&nbsp;&nbsp;helping teachers to choose suitable Instructional Patterns for their lessons</p>
+					<p class="text-muted text-justify" style=" margin: 0px">&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-ok" style="color: #ABC9BE"></span>&nbsp;&nbsp;learning more about Instructional Patterns and how they could be used</p>
+					<p class="text-muted text-justify" style=" margin: 0px">&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-ok" style="color: #ABC9BE"></span>&nbsp;&nbsp;increasing the didactical variety of lessons</p>
+					<p class="text-muted text-justify" style=" margin: 0px">&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-ok" style="color: #ABC9BE"></span>&nbsp;&nbsp;facilitating the use of digital media in the teaching lessons</p>
+					<p class="text-muted text-justify" style=" margin: 0px">&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-ok" style="color: #ABC9BE"></span>&nbsp;&nbsp;getting an overview of the different Instructional Patterns</p>
+					<p class="text-muted text-justify" style=" margin: 0px">&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-ok" style="color: #ABC9BE"></span>&nbsp;&nbsp;creating your own Instructional Pattern and share it with other teachers</p>
+					<p class="text-muted text-justify" style=" margin: 0px">&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-ok" style="color: #ABC9BE"></span>&nbsp;&nbsp;learning more about the promising project “e SIT 4 SIP“ with its long term benefits:</p>
+					<p class="text-muted text-justify">“We firmly believe that the project’s results will provide a set of tools that will enable schools to reflect on their current ICT strategies and pedagogical goals“.</p>
                 </div>
                
             </div>
@@ -612,7 +601,7 @@ Using this website means ...
 
     
     
-    
+    <!-- Footer-->
 
     <footer class="contact">
         <div class="container" id="contact">
@@ -633,33 +622,29 @@ Using this website means ...
                 <div class="col-md-4">
                     <ul class="list-inline quicklinks">
                         <li><a href="#contactForm"  data-toggle="collapse" data-target="#contactForm"><style="color: black">Contact</style></a>
-                        </li>
-                                     
-                        
+                        </li>          
                         <li><a href="#imprint" data-toggle="collapse" data-target="#imprint">Imprint</a>
-                        	
                         </li>
                     </ul>
                 </div>
             </div>
           
-         
+         	<!-- Impressum -->
+         	
           	<div id="imprint" class="container row collapse" style="margin-top: 30px">
           		<div class="col-lg-12" style="color: #fff" ><p>Empowering the School IT infrastructures for the  implementation of Sustainable Instructional Patterns is an EU Erasmus+.
-
-It is coordinated by the Weingarten University of Education.
-
-Address: PH Weingarten, Kirchplatz 2, 88250 Weingarten
-
-Editor: Paul Libbrecht (Informatik) & Wolfgang Müller (Mediendidaktik)
-Contact: <a href="#contactForm" >contact@esit4sip.eu</a></p>
+								It is coordinated by the Weingarten University of Education.
+								Address: PH Weingarten, Kirchplatz 2, 88250 Weingarten
+								Editor: Paul Libbrecht (Informatik) & Wolfgang Müller (Mediendidaktik)
+								Contact: 
+					<a href="#contactForm" >contact@esit4sip.eu</a></p>
 				</div>
           	</div>
     
-     
-        
+    
+    		<!-- Contact Function-->
+    
             <div id="contactForm" class="container row collapse" style="margin-top: 30px">
-            
                 <div class="col-lg-12">
                     <form name="sentMessage"  novalidate>
                         <div class="row">
@@ -698,7 +683,9 @@ Contact: <a href="#contactForm" >contact@esit4sip.eu</a></p>
   		</div>
     </footer>
 
-  <div id="virtualgrouppuzzle" class="modal fade" role="dialog">
+<!-- Modal Instructional Patterns - Virtual Group Puzzle -->
+
+	<div id="virtualgrouppuzzle" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
@@ -718,8 +705,12 @@ Contact: <a href="#contactForm" >contact@esit4sip.eu</a></p>
  </div>
 </div>
 
-<div id="webquest" class="modal fade" role="dialog">
+<!-- Modal Instructional Patterns - Webquest-->
+
+	<div id="webquest" class="modal fade" role="dialog">
   <div class="modal-dialog">
+  	
+  	<!-- Modal content-->
 	 <div class="modal-content col-mg-12 text-muted text-justify">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -736,10 +727,12 @@ Contact: <a href="#contactForm" >contact@esit4sip.eu</a></p>
  </div>
 </div>
  
+<!-- Modal Instructional Patterns - Flipped Classroom-->
 
-<div id="flippedclassroom" class="modal fade" role="dialog">
- 
-	<div class="modal-dialog modal-lg text-muted text-justify">   
+	<div id="flippedclassroom" class="modal fade" role="dialog">
+	<div class="modal-dialog modal-lg text-muted text-justify"> 
+		
+	<!-- Modal content-->  
      <div class="modal-content col-lg-12">
       	<div class="modal-header">
         	<button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -826,11 +819,6 @@ Contact: <a href="#contactForm" >contact@esit4sip.eu</a></p>
       </div>
       	<div class="modal-footer">
       		<a><span class="glyphicon glyphicon-print" style="font-size: 51px" onclick="window.print()"></span></a>
-        </div>
-    </div>
-  	</div>  
-</div>
-
 </body>
 
 </html>
